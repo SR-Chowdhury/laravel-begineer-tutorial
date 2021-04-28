@@ -9,6 +9,7 @@
 **Answer:** M[Model] V[View] C[Controller] MVC used _Laravel_ && M[Model] V[View] T[Template] MVT used _Django_
 
 - [ ]  Laravel Homestead & Valet
+
 **Answer:** Laravel _**Homestead**_ is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, a web server, and any other server software on your local machine.
 Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, MySQL, PostgreSQL, Redis, Memcached, Node, and all of the other software you need to develop amazing Laravel applications.
 **Valet** is a Laravel development environment for macOS minimalists like **Homestead**
