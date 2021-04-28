@@ -5,7 +5,6 @@
 **Answer:** Laravel is a web application PHP framework. Before starting Laravel you should have knowledge on PHP & cocept of OOP.
 
 - [ ]  MVC pattern & MVT pattern?
-
 **Answer:** M[Model] V[View] C[Controller] MVC used _Laravel_ && M[Model] V[View] T[Template] MVT used _Django_
 - [ ]  .
 - [ ]  .
