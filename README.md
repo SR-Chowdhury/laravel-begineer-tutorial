@@ -14,8 +14,9 @@
 Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, MySQL, PostgreSQL, Redis, Memcached, Node, and all of the other software you need to develop amazing Laravel applications.
 **Valet** is a Laravel development environment for macOS minimalists like **Homestead**
 
-- [ ]  .
-- [ ]  .
+- [ ]  Architecture Concepts
+
+**Answer:** Read the [Documentation of Laravel](https://laravel.com/docs/8.x/lifecycle) & Ready for Interview. Becuase majority of the question come from here. 
 - [ ]  .
 - [ ]  .
 - [ ]  .
