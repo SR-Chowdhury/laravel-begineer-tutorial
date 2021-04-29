@@ -64,6 +64,7 @@
 
 - [ ]  **Route [url(), URL::to(), md5() encryption]**
 > **Answer:** When you have given a name of a router like -
+> 
 > **web.php** 
 >   ``` 
 >       Route::get('/', [FirstController::class, 'Method1']);
@@ -77,7 +78,8 @@
 >       <a href="{{ URL::to('/about') }}">about</a>
 >       <a href="{{ route('blog_page') }}">Blog</a>
 >       <a href="{{ route('contact_page') }}">Contact</a>
->   ``` **N.B. `md5` means encryption & when you used in router then you must have give a route name()**
+>   ``` 
+>   **N.B. `md5` means encryption & when you used in router then you must have give a route name()**
 >   
 - [ ]   
     => 
