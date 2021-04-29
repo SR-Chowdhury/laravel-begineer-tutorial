@@ -22,7 +22,7 @@ Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, M
 
 **Answer:** Blade is the simple, yet powerful templating engine that is included with Laravel. Blade template files use the **`.blade.php`** file extension and are typically stored in the resources/views directory.
 
-- [ ]  **Middleware in Laravel**
+- [ ] **Middleware in Laravel**
 
 **Answer:** Middleware provide a convenient mechanism for inspecting and filtering HTTP requests entering your application. There are several middleware included in the Laravel framework, including middleware for authentication and CSRF protection. All of these middleware are located in the **`app/Http/Middleware directory`**.
 * Create a Middleware **`php artisan make:middleware exampleMiddleware`**
@@ -43,8 +43,17 @@ Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, M
     Route::middleware(['web'])->group(function () {
         //
     });
-```
-- [ ]  .
+    ```
+- [ ] ## **Controller**
+> **Answer:** Where we implement our logic. When a HTTP request comes through route to Controller than it pass to View or Models vice versa.
+> **N.B.**: Some changes comes in php v8.0
+> * To create a controller using cmd or powershell `php artisan make:controller ExampleController`
+> * **Web.php **
+> ```
+> use App\Http\Controllers\FirstController; [Top of the web.php route file]
+> Route::get('/about', [FirstController::class, 'firstMethod']);
+>   
+> ```
 - [ ]  .
 - [ ]   
     => 
