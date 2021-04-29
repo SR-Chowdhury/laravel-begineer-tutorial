@@ -34,10 +34,10 @@
             Laravel v-8
         </div>
         <div>
-            <a class="text-success px-3 a-border" href="#">Home</a>
+            <a class="text-warning px-3" href="{{ URL::to('/') }}">Home</a>
             <a class="text-warning px-3" href="#">About</a>
-            <a class="text-warning px-3" href="{{ url('four') }}">IV</a>
-            <a class="text-warning px-3" href="{{ URL::to('six') }}">VI</a>
+            <a class="text-success px-3 a-border" href="{{ url('four') }}">IV</a>
+            <a class="text-warning px-3" href="{{ route('vi') }}">VI</a>
             <a class="text-warning px-3" href="#">Blog</a>
             <a class="text-warning px-3" href="#">Contact</a>
         </div>

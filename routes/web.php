@@ -65,3 +65,8 @@ Route::middleware(['test'])->group(function () {
 
 Route::get('/blog', [FirstController::class, 'firstMethod']);
 
+
+// -------------URL, URL::to, route and encryption------------------------
+
+Route::get('/four', [FirstController::class, 'fourMethod'])->name('iv');
+Route::get(md5('/six'), [FirstController::class, 'sixMethod'])->name('vi');
