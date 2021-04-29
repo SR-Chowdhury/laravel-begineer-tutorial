@@ -17,7 +17,11 @@ Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, M
 - [ ]  Architecture Concepts
 
 **Answer:** Read the [Documentation of Laravel](https://laravel.com/docs/8.x/lifecycle) & Ready for Interview. Becuase majority of the question come from here. 
-- [ ]  .
+
+- [ ]  Blade Template / Syntaxt
+
+**Answer:** Blade is the simple, yet powerful templating engine that is included with Laravel. Blade template files use the `**.blade.php**` file extension and are typically stored in the resources/views directory.
+
 - [ ]  .
 - [ ]  .
 - [ ]  .
