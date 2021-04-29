@@ -3,10 +3,11 @@
 # Laravel Basic to Advanced
 - [ ]  **What is Laravel? Pre-requirement for learning Laravel**
 
-**Answer:** Laravel is a web application PHP framework. Before starting Laravel you should have knowledge on PHP & cocept of OOP.
+> **Answer:** Laravel is a web application PHP framework. Before starting Laravel you should have knowledge on PHP & cocept of OOP.
+
 - [ ]  **MVC pattern & MVT pattern?**
 
-**Answer:** M[Model] V[View] C[Controller] MVC used _Laravel_ && M[Model] V[View] T[Template] MVT used _Django_
+> **Answer:** M[Model] V[View] C[Controller] MVC used _Laravel_ && M[Model] V[View] T[Template] MVT used _Django_
 
 - [ ]  **Laravel Homestead & Valet**
 
@@ -51,6 +52,7 @@
 
 - [ ] **Controller**
 > **Answer:** Where we implement our logic. When a HTTP request comes through route to Controller than it pass to View or Models vice versa.
+> 
 > **N.B.**: Some changes comes in php v8.0
 > * To create a controller using cmd or powershell `php artisan make:controller ExampleController`
 > * **Web.php **
