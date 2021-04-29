@@ -43,7 +43,7 @@
 >           return view('about');
 >       })->middleware('test');
 >   ```
-> * **Group Middleware:** `app/Http/karnel.php` -> `protected $middlewareGroups`  
+> * **Group Middleware:** `app/Http/karnel.php` -> `protected $routeMiddleware`  
 >    ```
 >    Route::middleware(['web'])->group(function () {
 >        //
