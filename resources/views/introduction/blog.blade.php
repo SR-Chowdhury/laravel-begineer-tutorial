@@ -35,8 +35,8 @@
         </div>
         <div>
             <a class="text-warning px-3" href="#">Home</a>
-            <a class="text-success px-3 a-border" href="#">About</a>
-            <a class="text-warning px-3" href="#">Blog</a>
+            <a class="text-warning px-3" href="#">About</a>
+            <a class="text-success px-3 a-border" href="#">Blog</a>
             <a class="text-warning px-3" href="#">Contact</a>
         </div>
     </div>

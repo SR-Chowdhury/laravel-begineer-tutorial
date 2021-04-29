@@ -1,6 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FirstController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +61,7 @@ Route::middleware(['test'])->group(function () {
 
 });
 
-// -------------------------------------------
+// -------------------Controller Introduction------------------------
+
+Route::get('/blog', [FirstController::class, 'firstMethod']);
 
