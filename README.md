@@ -33,13 +33,17 @@ Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, M
 * **Global Middleware:** `app/Http/karnel.php` -> `protectd $middleware`  
 * **Assigning Middleware To Routes:** `app/Http/karnel.php` -> `protectd $routeMiddleware`  
     **N.B.** When you want to use middleware for one or more routes.
+    ```
+        Route::get('/about', function() {
+            return view('about');
+        })->middleware('test');
+    ```
 * **Group Middleware:** `app/Http/karnel.php` -> `protected $middlewareGroups`  
     ```
     Route::middleware(['web'])->group(function () {
         //
     });
     ```
-
 - [ ]  .
 - [ ]  .
 - [ ]   
