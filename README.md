@@ -90,7 +90,7 @@
 >   @extends('footer')
 >   
 > ```
-> ## Yeiedl in Laravel
+> # Yeield in Laravel
 > * welcome.html
 > ```
 >   <body>
