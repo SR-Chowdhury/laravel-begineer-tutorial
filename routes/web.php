@@ -16,8 +16,8 @@ use App\Http\Controllers\FirstController;
 
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('introduction/welcome');
+})->name('welcome');
 
 // ------------------Route Prefixes-------------------------
 Route::prefix('superstar')-> group(function() {
@@ -70,3 +70,14 @@ Route::get('/blog', [FirstController::class, 'firstMethod']);
 
 Route::get('/four', [FirstController::class, 'fourMethod'])->name('iv');
 Route::get(md5('/six'), [FirstController::class, 'sixMethod'])->name('vi');
+
+
+/**
+ * Extends, Yeield & Section Tutorial
+ * Folder: views/extends
+ */
+//----------------------------------------------------------------
+
+Route::get('/index', [FirstController::class, 'extendIndex'])->name('extend');
+Route::get('/about-us', [FirstController::class, 'extendAbout'])->name('about_extend');
+Route::get('/contact-us', [FirstController::class, 'extendContact'])->name('contact_extend');
