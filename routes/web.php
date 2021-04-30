@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\CleanBlogController;
 
 
 /*
@@ -81,3 +82,13 @@ Route::get(md5('/six'), [FirstController::class, 'sixMethod'])->name('vi');
 Route::get('/index', [FirstController::class, 'extendIndex'])->name('extend');
 Route::get('/about-us', [FirstController::class, 'extendAbout'])->name('about_extend');
 Route::get('/contact-us', [FirstController::class, 'extendContact'])->name('contact_extend');
+
+
+/**
+ * Clean Blog Route Here
+ */
+Route::get('/welcome-blog', [CleanBlogController::class, 'home'])->name('blog-home');
+Route::get('/blog-index', [CleanBlogController::class, 'index'])->name('blog-index');
+Route::get('/blog-about', [CleanBlogController::class, 'about'])->name('blog-about');
+Route::get('/blog-post', [CleanBlogController::class, 'post'])->name('blog-post');
+Route::get('/blog-contact', [CleanBlogController::class, 'contact'])->name('blog-contact');
