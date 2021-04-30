@@ -80,7 +80,28 @@
 >       <a href="{{ route('contact_page') }}">Contact</a>
 >   ``` 
 >   **N.B. `md5` means encryption & when you used in router then you must have give a route name()**
+>
+   
+- [ ]  **Layouts Using Template Inheritance**
+> **Answer:** When defining a child view, use the @extends Blade directive to specify which layout the child view should "inherit". 
+> ``` 
+>   @extends('hearder')
+>       <h1>Bismillah</h1>
+>   @extends('footer')
 >   
-- [ ]   
+> ```
+> ## Yeiedl in Laravel
+> * welcome.html
+> ```
+>   <body>
+>       @yeield('content')
+>   </body>
+> ```
+> * index.html
+> ```
+>  @section ('content')
+>  ------
+>  @endsection
+> ```
     => 
     
