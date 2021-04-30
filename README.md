@@ -105,5 +105,7 @@
 > ```
 - [ ] **Asset in Laravel**
 > **Answer:** declare asset `{{ asset('public/frontend/css/bootstrap.css') }}`
-> Even we can use `{{ URL::to('public/frontend/css/bootstrap.css') }}` here **URL::to('')** & **asset('')** work same
+> 
+> Even we can use `{{ URL::to('public/frontend/css/bootstrap.css') }}` 
+> here **URL::to('')** & **asset('')** work same
     
