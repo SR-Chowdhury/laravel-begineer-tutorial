@@ -3,8 +3,8 @@
 	<h1 class="text-center text-success pt-5">Bismillah Hir Rahmanir Rahim</h1>
 
     <div class="content display-6 text-center">
-        <div class="text-info py-5">
-            Laravel v-8
+        <div class="text-danger py-5">
+            Laravel v-6
         </div>
         <div>
             <a class="text-success px-3 a-border" href="#">Home</a>

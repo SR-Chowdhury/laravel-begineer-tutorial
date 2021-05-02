@@ -6,14 +6,14 @@
         <meta name="description" content="" />
         <meta name="author" content="Shihan Chowdhury" />
         <title>Clean Blog - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('public/clean-blog-asset/favicon.ico') }}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('clean-blog-asset/css/styles.css')}}" rel="stylesheet" />
+        <link href="{{ asset('public/clean-blog-asset/css/styles.css')}}" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
@@ -35,14 +35,14 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url( {{ asset('clean-blog-asset/img/home-bg.jpg') }} )">
+        <header class="masthead" style="background-image: url( {{ asset('public/clean-blog-asset/img/home-bg.jpg') }} )">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
                         <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                            <h1>Explore SuperStar World</h1>
+                            <span class="subheading">Laravel Begineer Tutorial</span>
                         </div>
                     </div>
                 </div>
@@ -93,6 +93,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{{ asset('clean-blog-asset/js/scripts.js') }}"></script>
+        <script src="{{ asset('public/clean-blog-asset/js/scripts.js') }}"></script>
     </body>
 </html>
