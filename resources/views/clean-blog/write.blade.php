@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <a href="{{ route('blog-add-category') }}" class="btn btn-danger">Add Category</a>
-        <a href="#" class="btn btn-info">All Category</a>
+        <a href="{{ route('blog-show-category') }}" class="btn btn-info">All Category</a>
 
         <form id="contactForm" name="sentMessage" novalidate>
             <div class="form-group controls mt-3">

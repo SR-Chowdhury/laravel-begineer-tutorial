@@ -96,5 +96,6 @@ Route::get('/blog-contact', [CleanBlogController::class, 'contact'])->name('blog
 
 // Category CRUD
 Route::get('/blog-add-category', [CleanBlogController::class, 'addCategory'])->name('blog-add-category');
+Route::get('/blog/all-category', [CleanBlogController::class, 'showCategory'])->name('blog-show-category');
 Route::get('/blog/Store/Category', [CleanBlogController::class, 'insertCategory'])->name('blog-insert-category');
 

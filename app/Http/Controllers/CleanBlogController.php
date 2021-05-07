@@ -30,6 +30,14 @@ class CleanBlogController extends Controller
     }
 
     // CRUD
+    public function showCategory() {
+        $fetchCategory = DB::table('categories')->get();
+        // return response()->json($fetchCategory);
+        // echo "<pre>";
+        // print_r($fetchCategory);
+        return view('clean-blog/all_category', compact('fetchCategory'));
+    }
+
     public function insertCategory(Request $request) {
         // Check incoming data
         // return response()-> json($data);
