@@ -31,13 +31,19 @@ class CleanBlogController extends Controller
 
     // CRUD
     public function insertCategory(Request $request) {
-        $data = array();
-        $data['name'] = $request->name;
-        $data['slug'] = $request->slug;
         // Check incoming data
         // return response()-> json($data);
         // echo "<pre>";
         // print_r($data);
+
+        $validate = $request->validate([
+            'name' => 'required|unique:categories|max:255|min:5',
+            'slug' => 'required|unique:categories|max:255|min:5'
+        ]);
+
+        $data = array();
+        $data['name'] = $request->name;
+        $data['slug'] = $request->slug;
 
         $category = DB::table('categories')->insert($data);
 

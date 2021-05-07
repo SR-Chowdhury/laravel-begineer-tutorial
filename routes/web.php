@@ -74,7 +74,7 @@ Route::get(md5('/six'), [FirstController::class, 'sixMethod'])->name('vi');
 
 
 /**
- * Extends, Yeield & Section Tutorial
+ * Extends, yeield & Section Tutorial
  * Folder: views/extends
  */
 //----------------------------------------------------------------
