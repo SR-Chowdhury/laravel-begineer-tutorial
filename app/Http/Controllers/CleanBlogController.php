@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class CleanBlogController extends Controller
 {
@@ -18,7 +19,43 @@ class CleanBlogController extends Controller
     public function post() {
         return view('clean-blog/post');
     }
+    public function write() {
+        return view('clean-blog/write');
+    }
     public function contact() {
         return view('clean-blog/contact');
     }
+    public function addCategory() {
+        return view('clean-blog/add_category');
+    }
+
+    // CRUD
+    public function insertCategory(Request $request) {
+        $data = array();
+        $data['name'] = $request->name;
+        $data['slug'] = $request->slug;
+        // Check incoming data
+        // return response()-> json($data);
+        // echo "<pre>";
+        // print_r($data);
+
+        $category = DB::table('categories')->insert($data);
+
+        if($category) {
+            $notification = array(
+                'message' => 'Alhamdulillah, Data is successfully inserted',
+                'alert-type' => 'success'
+            );
+            return Redirect()->back()->with($notification);
+        }
+        else {
+            $notification = array(
+                'message' => 'Ops! something went wrong',
+                'alert-type' => 'error'
+            );
+            return Redirect()->back()->with($notification);
+        }
+
+    }
+
 }

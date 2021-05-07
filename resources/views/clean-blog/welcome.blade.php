@@ -12,8 +12,13 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('public/clean-blog-asset/css/styles.css')}}" rel="stylesheet" />
+
+        <!-- Toastr CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        
     </head>
     <body>
         <!-- Navigation-->
@@ -28,7 +33,8 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ route('blog-index') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('blog-about') }}">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('blog-post') }}">Sample Post</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('blog-post') }}">Blog Post</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('write-post') }}">Write Post</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('blog-contact') }}">Contact</a></li>
                     </ul>
                 </div>
@@ -89,10 +95,37 @@
                 </div>
             </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- toastr CDN-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="{{ asset('public/clean-blog-asset/js/scripts.js') }}"></script>
+        <script>
+            @if (Session::has('message'))
+
+                var type = "{{ Session::get('alert-type', 'success') }}"
+
+                switch(type) {
+                    case 'success' :
+                        toastr.success(" {{ Session::get('message') }} ");
+                        break;
+                    case 'info' :
+                        toastr.info(" {{ Session::get('message') }} ");
+                        break;
+                    case 'warning' :
+                        toastr.warning(" {{ Session::get('message') }} ");
+                        break;
+                    case 'error' :
+                        toastr.error(" {{ Session::get('message') }} ");
+                }
+
+            @endif
+
+        </script>
     </body>
 </html>

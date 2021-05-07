@@ -91,4 +91,10 @@ Route::get('/welcome-blog', [CleanBlogController::class, 'home'])->name('blog-ho
 Route::get('/blog-index', [CleanBlogController::class, 'index'])->name('blog-index');
 Route::get('/blog-about', [CleanBlogController::class, 'about'])->name('blog-about');
 Route::get('/blog-post', [CleanBlogController::class, 'post'])->name('blog-post');
+Route::get('/write-post', [CleanBlogController::class, 'write'])->name('write-post');
 Route::get('/blog-contact', [CleanBlogController::class, 'contact'])->name('blog-contact');
+
+// Category CRUD
+Route::get('/blog-add-category', [CleanBlogController::class, 'addCategory'])->name('blog-add-category');
+Route::get('/blog/Store/Category', [CleanBlogController::class, 'insertCategory'])->name('blog-insert-category');
+
