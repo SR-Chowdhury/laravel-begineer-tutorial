@@ -72,4 +72,19 @@ class CleanBlogController extends Controller
 
     }
 
+    public function singleData($id) {
+        // echo $id;
+        $singleData = DB::table('categories')->where('id', $id)->first();
+        // echo "<pre>";
+        // print_r($singleData);
+        return view('clean-blog/single_data')->with('singleData', $singleData);
+    }
+
+    public function deleteSingleData($id) {
+        // echo $id;
+        $deleteSingleData = DB::table('categories')->where('id', $id)->delete();
+        $fetchCategory = DB::table('categories')->get();
+        return view('clean-blog/all_category', compact('fetchCategory'));
+    }
+
 }

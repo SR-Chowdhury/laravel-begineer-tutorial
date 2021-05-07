@@ -98,4 +98,6 @@ Route::get('/blog-contact', [CleanBlogController::class, 'contact'])->name('blog
 Route::get('/blog-add-category', [CleanBlogController::class, 'addCategory'])->name('blog-add-category');
 Route::get('/blog/all-category', [CleanBlogController::class, 'showCategory'])->name('blog-show-category');
 Route::get('/blog/Store/Category', [CleanBlogController::class, 'insertCategory'])->name('blog-insert-category');
+Route::get('/view/Category/{id}', [CleanBlogController::class, 'singleData']);
+Route::get('/delete/Category/{id}', [CleanBlogController::class, 'deleteSingleData']);
 

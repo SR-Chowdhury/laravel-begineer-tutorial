@@ -22,9 +22,9 @@
                 <td>{{ $data->slug }}</td>
                 <td>{{ $data->created_at }}</td>
                 <td>
-                    <a class="btn-sm btn-info" href="#">View</a>
+                    <a class="btn-sm btn-info" href=" {{ URL::to('view/Category/'.$data->id)}} ">View</a>
                     <a class="btn-sm btn-warning" href="#">Edit</a>
-                    <a class="btn-sm btn-danger" href="#">Delete</a>
+                    <a class="btn-sm btn-danger" id="deleteSingleId" href=" {{ URL::to('delete/Category/'.$data->id) }} ">Delete</a>
                 </td>
             </tr>
             @endforeach
