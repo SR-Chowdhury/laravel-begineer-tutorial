@@ -97,7 +97,10 @@ Route::get('/blog-contact', [CleanBlogController::class, 'contact'])->name('blog
 // Category CRUD
 Route::get('/blog-add-category', [CleanBlogController::class, 'addCategory'])->name('blog-add-category');
 Route::get('/blog/all-category', [CleanBlogController::class, 'showCategory'])->name('blog-show-category');
-Route::get('/blog/Store/Category', [CleanBlogController::class, 'insertCategory'])->name('blog-insert-category');
+Route::post('/blog/Store/Category', [CleanBlogController::class, 'insertCategory'])->name('blog-insert-category');
 Route::get('/view/Category/{id}', [CleanBlogController::class, 'singleData']);
+Route::get('/edit/Category/{id}', [CleanBlogController::class, 'editSingleData']);
+Route::post('/update/Category/{id}', [CleanBlogController::class, 'updateSingleData']);
 Route::get('/delete/Category/{id}', [CleanBlogController::class, 'deleteSingleData']);
+
 

@@ -80,11 +80,48 @@ class CleanBlogController extends Controller
         return view('clean-blog/single_data')->with('singleData', $singleData);
     }
 
+    public function editSingleData($id) {
+        // echo $id;
+        $category = DB::table('categories')->where('id', $id)->first();
+        // echo "<pre>";
+        // print_r($category);
+        return view('clean-blog.edit_category', compact('category'));
+    }
+
+    public function updateSingleData(Request $request, $id) {
+
+        $validate = $request->validate([
+            'name' => 'required|max:255|min:5',
+            'slug' => 'required|max:255|min:5'
+        ]);
+
+        $data = array();
+        $data['name'] = $request->name;
+        $data['slug'] = $request->slug;
+
+        $updateCategory = DB::table('categories')->where('id', $id)->update($data);
+
+        if ($updateCategory) {
+            $notification = array(
+                'message' => 'Alhamdulillah, Data is successfully updated',
+                'alert-type' => 'success'
+            );
+            return Redirect()->route('blog-show-category')->with($notification);
+        }
+        else {
+            $notification = array(
+                'message' => 'Ops! something went wrong',
+                'alert-type' => 'error'
+            );
+            return Redirect()->back()->with($notification);
+        }
+    }
+
     public function deleteSingleData($id) {
         // echo $id;
         $deleteSingleData = DB::table('categories')->where('id', $id)->delete();
-        $fetchCategory = DB::table('categories')->get();
-        return view('clean-blog/all_category', compact('fetchCategory'));
+
+        return Redirect()->route('blog-show-category');
     }
 
 }
