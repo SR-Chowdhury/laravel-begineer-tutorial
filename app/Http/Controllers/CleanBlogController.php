@@ -20,7 +20,8 @@ class CleanBlogController extends Controller
         return view('clean-blog/post');
     }
     public function write() {
-        return view('clean-blog/write');
+        $category = DB::table('categories')->get();
+        return view('clean-blog/write', compact('category'));
     }
     public function contact() {
         return view('clean-blog/contact');

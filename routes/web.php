@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\CleanBlogController;
+use App\Http\Controllers\PostController;
 
 
 /*
@@ -102,5 +103,13 @@ Route::get('/view/Category/{id}', [CleanBlogController::class, 'singleData']);
 Route::get('/edit/Category/{id}', [CleanBlogController::class, 'editSingleData']);
 Route::post('/update/Category/{id}', [CleanBlogController::class, 'updateSingleData']);
 Route::get('/delete/Category/{id}', [CleanBlogController::class, 'deleteSingleData']);
+
+// Post CRUD
+Route::get('/post/all', [PostController::class, 'allPost'])->name('all-post');
+Route::post('/post/store', [PostController::class, 'storePost'])->name('store-post');
+Route::get('/post/view/{id}', [PostController::class, 'ViewSinglePost']);
+Route::get('/post/edit/{id}', [PostController::class, 'EditSinglePost']);
+Route::post('/post/update/{id}', [PostController::class, 'UpdateSinglePost']);
+Route::get('/post/delete/{id}', [PostController::class, 'DeleteSinglePost']);
 
 
