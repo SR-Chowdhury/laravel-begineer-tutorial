@@ -208,12 +208,43 @@ first() will return only specific row from 'table_name'
         }
     }
 > 
+
 - [ ] **Fetch an image in Laravel**
 > **Answer:**
 
     <img src=" {{ URL::to($data->image) }} " style="height: 40px; width: 70px" />
     
 Here `$data->image` means `/publi/assest/img_full_name`  
+
+- [ ] **Update Image validation in Laravel**
+> **Answer:** 
+**N.B. must include in the form `<input type="hidden" name="old_photo" value="{{ $data->image_name }}" />`**
+
+    public function update(Request $request, $id) {
+        $validate = $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,jpg,png|max:100',
+        ]);
+        $image = $request->file(image_name);
+        if($image) {
+            $img_name = hexdec(uniqid());
+            $extension = strtolower($image->getClientOriginalExtension());
+            $img_full_name = $img_name. '.' . $extension;
+            $upload_path = 'public/assests/';
+            // Must be give a (/)slash after end of path name
+            $img_url = $upload_path.$img_full_name;
+            $success = $image->move($upload_path, $img_full_name);
+            $data['image_name] = $img_url;
+            
+            @unlink($request->old_photo);
+            $updateData = DB:: table('table_name')->where(')->update($data);
+        }
+        else {
+            $data['image_name] = $request->old_photo;
+            $updateData = DB:: table('table_name')->where(')->update($data);
+        }
+    }
+> 
+
 
 - [ ] **Asset in Laravel**
 > **Answer:**
