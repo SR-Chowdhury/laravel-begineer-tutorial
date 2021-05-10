@@ -174,18 +174,47 @@ get() will return all data from 'table_name'
 first() will return only specific row from 'table_name'
 > 
 
-- [ ] **Asset in Laravel**
+- [ ] **Send an id from form view Laravel**
 > **Answer:**
+
+    <a href =" {{ URL::to('/home/create/'.$data->id) }} " />
+    Route::get('/home/create/{id}', [controller::class, 'viewMethod']);
 > 
-- [ ] **Asset in Laravel**
+
+- [ ] **Post image in Laravel**
+> **Answer:** Must use 
+
+    <form action="#" method="POST" encytype = 'multipart/form-data'>**
+> 
+
+- [ ] **Image validation in Laravel**
+> **Answer:** 
+
+    public function store(Request $request) {
+        $validate = $request->validate([
+            'image' => 'nullable|image|mimes:jpeg,jpg,png|max:100',
+        ]);
+        $image = $request->file(image_name);
+        if($image) {
+            $img_name = hexdec(uniqid());
+            $extension = strtolower($image->getClientOriginalExtension());
+            $img_full_name = $img_name. '.' . $extension;
+            $upload_path = 'public/assests/';
+            // Must be give a (/)slash after end of path name
+            $img_url = $upload_path.$img_full_name;
+            $success = $image->move($upload_path, $img_full_name);
+            $data['image_name] = $img_url;
+            $storeData = DB:: table('table_name')->insert($data);
+        }
+    }
+> 
+- [ ] **Fetch an image in Laravel**
 > **Answer:**
-> 
-- [ ] **Asset in Laravel**
-> **Answer:**
-> 
-- [ ] **Asset in Laravel**
-> **Answer:**
-> 
+
+    <img src=" {{ URL::to($data->image) }} " style="height: 40px; width: 70px" />
+    
+Here `$data->image` means `/publi/assest/img_full_name`  
+
 - [ ] **Asset in Laravel**
 > **Answer:**
 > 
