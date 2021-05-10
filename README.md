@@ -104,8 +104,62 @@
 >  @endsection
 > ```
 - [ ] **Asset in Laravel**
-> **Answer:** declare asset `{{ asset('public/frontend/css/bootstrap.css') }}`
+> **Answer:** declare asset `{{ asset('frontend/css/bootstrap.css') }}`
 > 
-> Even we can use `{{ URL::to('public/frontend/css/bootstrap.css') }}` 
+> Even we can use `{{ URL::to('frontend/css/bootstrap.css') }}` 
 > here **URL::to('')** & **asset('')** work same
+> 
+- [ ] **Root Directory Change in laravel**
+> **Answer:** 
+> First bring out all files from `public` folder to `root` folder / directory
+> 
+> Besides, assest should like `{{ asset('public/frontend/css/bootstrap.css') }}` here `public/` added because `index.php` now in root directory 
+> 
+- [ ] **Migration in Laravel**
+> **Answer:** To create a table remember that table name should have in plural form.
+
+        php artisan make:migration create_users_table --create=users
+        php artisan migrate
+  
+  **N>B> Table->timestamp should be created as default value Current_Timestamp**
+        
+> 
+- [ ] **@CSRF in Laravel**
+> **Answer:** Cross-site request forgery (CSRF) are a type of malicious exploit whereby unauthorized commands are performed on behalf of an authorized user.
+> Thankfully, Laravel makes it easy to protect your application from CSRF by using `@csrf` in `form`
+> 
+ **Remember: A website or a webapplication is being hacked by attack in `form action` or in `route`**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
+> 
+- [ ] **Asset in Laravel**
+> **Answer:**
     
