@@ -256,9 +256,19 @@ OR
     DB::table('BD')->join('UK', 'BD.category_id', 'UK.id')->select('BD.*', 'UK.name')->get();
 > 
 
-- [ ] **Asset in Laravel**
+## **Show Dynamic data in sylhet option in larave**
 > **Answer:**
-> 
+
+    <select name="anything">
+        <option value="{{$data->id}}" <?php if($data->id == dynamic_id->id) echo "selected" ?> > {{ $data->name }}</option>
+    </select>
+**N.B. value assing in Textarea little bit different: **
+
+    <textarea name="anything">
+        {{ $data->details }}
+    </textrea>
+    
+    
 - [ ] **Asset in Laravel**
 > **Answer:**
 > 
