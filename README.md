@@ -216,6 +216,7 @@ first() will return only specific row from 'table_name'
     
 Here `$data->image` means `/publi/assest/img_full_name`  
 
+
 - [ ] **Update Image validation in Laravel**
 > **Answer:** 
 **N.B. must include in the form `<input type="hidden" name="old_photo" value="{{ $data->image_name }}" />`**
@@ -246,9 +247,15 @@ Here `$data->image` means `/publi/assest/img_full_name`
 > 
 
 
-- [ ] **Asset in Laravel**
+- [ ] **one to one join in Laravel**
 > **Answer:**
+
+    DB::table('BD')->join('UK', 'BD.category_id', 'UK.id')->select('BD.*', 'UK.name')->where('id', $id)->first();
+OR
+
+    DB::table('BD')->join('UK', 'BD.category_id', 'UK.id')->select('BD.*', 'UK.name')->get();
 > 
+
 - [ ] **Asset in Laravel**
 > **Answer:**
 > 
