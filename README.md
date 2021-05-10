@@ -249,6 +249,19 @@ Here `$data->image` means `/publi/assest/img_full_name`
     }
 > 
 
+## **Delete Image in Laravel**
+> **Answer:** 
+**N.B. Concern, that image not only deleted form databse it should also delte from `public/assets/`**
+
+    public function delete($id) {
+        $x = DB::table('user')->where('id', $id)->first();
+        $deleteData = DB::table('user')->where('id', $id)->delete();
+        if($deleteData) {
+            @unlink($x->image);
+        }
+    }
+> 
+
 
 ## **one to one join in Laravel**
 > **Answer:**
