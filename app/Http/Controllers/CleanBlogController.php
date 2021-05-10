@@ -11,7 +11,11 @@ class CleanBlogController extends Controller
         return view('clean-blog/welcome');
     }
     public function index() {
-        return view('clean-blog/index');
+        $posts = DB::table('posts')
+                 ->join('categories', 'posts.category_id', 'categories.id')
+                 ->select('posts.*', 'categories.name')
+                 ->paginate(2);
+        return view('clean-blog/index', compact('posts'));
     }
     public function about() {
         return view('clean-blog/about');
