@@ -107,14 +107,16 @@
 > **Answer:** declare asset `{{ asset('frontend/css/bootstrap.css') }}`
 > 
 > Even we can use `{{ URL::to('frontend/css/bootstrap.css') }}` 
+> 
 > here **URL::to('')** & **asset('')** work same
 > 
+
 - [ ] **Root Directory Change in laravel**
-> **Answer:** 
-> First bring out all files from `public` folder to `root` folder / directory
+> **Answer:** First bring out all files from `public` folder to `root` folder / directory
 > 
 > Besides, assest should like `{{ asset('public/frontend/css/bootstrap.css') }}` here `public/` added because `index.php` now in root directory 
 > 
+
 - [ ] **Migration in Laravel**
 > **Answer:** To create a table remember that table name should have in plural form.
 
@@ -124,21 +126,54 @@
   **N>B> Table->timestamp should be created as default value Current_Timestamp**
         
 > 
+
 - [ ] **@CSRF in Laravel**
 > **Answer:** Cross-site request forgery (CSRF) are a type of malicious exploit whereby unauthorized commands are performed on behalf of an authorized user.
 > Thankfully, Laravel makes it easy to protect your application from CSRF by using `@csrf` in `form`
 > 
  **Remember: A website or a webapplication is being hacked by attack in `form action` or in `route`**
 > 
-- [ ] **Asset in Laravel**
+
+- [ ] **Check incoming form data in Laravel**
 > **Answer:**
+
+        echo "<pre>";
+        print_r($request);
+  OR,
+  
+        return response()->json($request);
 > 
-- [ ] **Asset in Laravel**
+
+- [ ] **Data Insert in Laravel without using model**
 > **Answer:**
+
+    DB::table('table_name')->insert($data) 
 > 
-- [ ] **Asset in Laravel**
+
+- [ ] **Data Update in Laravel without using model**
 > **Answer:**
+
+    DB::table('table_name')->where('id', $id)->update($data)
 > 
+
+- [ ] **Data Delete in Laravel without using model**
+> **Answer:**
+
+    DB::table('table_name')->where('id', $id)->delete()
+> 
+
+- [ ] **get() & first() in Migration laravel**
+> **Answer:**
+
+    DB::table('table_name')->get()
+    
+get() will return all data from 'table_name'
+
+    DB::table('table_name')->where('id', $id)->first()
+    
+first() will return only specific row from 'table_name'
+> 
+
 - [ ] **Asset in Laravel**
 > **Answer:**
 > 
