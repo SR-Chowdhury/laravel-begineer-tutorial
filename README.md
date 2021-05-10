@@ -5,27 +5,27 @@
 
 > **Answer:** Laravel is a web application PHP framework. Before starting Laravel you should have knowledge on PHP & cocept of OOP.
 
-- [ ]  **MVC pattern & MVT pattern?**
+##  **MVC pattern & MVT pattern?**
 
 > **Answer:** M[Model] V[View] C[Controller] MVC used _Laravel_ && M[Model] V[View] T[Template] MVT used _Django_
 
-- [ ]  **Laravel Homestead & Valet**
+##  **Laravel Homestead & Valet**
 
 > **Answer:** Laravel _**Homestead**_ is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to
 > install PHP, a web server, and any other server software on your local machine.
 > Homestead runs on any Windows, macOS, or Linux system and includes Nginx, PHP, MySQL, PostgreSQL, Redis, Memcached, Node, and all of the other software you need to develop amazing Laravel applications.
 > **Valet** is a Laravel development environment for macOS minimalists like **Homestead**
 
-- [ ]  **Architecture Concepts**
+##  **Architecture Concepts**
 
 > **Answer:** Read the [Documentation of Laravel](https://laravel.com/docs/8.x/lifecycle) & Ready for Interview. Becuase majority of the question come from here. 
 
-- [ ]  **Blade Template / Syntaxt**
+##  **Blade Template / Syntaxt**
 
 > **Answer:** Blade is the simple, yet powerful templating engine that is included with Laravel. Blade template files use the **`.blade.php`** file extension and
 > are typically stored in the resources/views directory.
 
-- [ ] **Middleware in Laravel**
+## **Middleware in Laravel**
 
 > **Answer:** Middleware provide a convenient mechanism for inspecting and filtering HTTP requests entering your application. There are several middleware
 > included in the Laravel framework, including middleware for authentication and CSRF protection. All of these middleware are located in the
@@ -50,7 +50,7 @@
 >    });
 >    ```
 
-- [ ] **Controller**
+## **Controller**
 > **Answer:** Where we implement our logic. When a HTTP request comes through route to Controller than it pass to View or Models vice versa.
 > 
 > **N.B.**: Some changes comes in php v8.0
@@ -62,7 +62,7 @@
 >   
 > ```
 
-- [ ]  **Route [url(), URL::to(), md5() encryption]**
+##  **Route [url(), URL::to(), md5() encryption]**
 > **Answer:** When you have given a name of a router like -
 > 
 > **web.php** 
@@ -82,7 +82,8 @@
 >   **N.B. `md5` means encryption & when you used in router then you must have give a route name()**
 >
    
-- [ ]  **Layouts Using Template Inheritance**
+##  **Layouts Using Template Inheritance**
+
 > **Answer:** When defining a child view, use the @extends Blade directive to specify which layout the child view should "inherit". 
 > ``` 
 >   @extends('hearder')
@@ -103,7 +104,9 @@
 >  ------
 >  @endsection
 > ```
-- [ ] **Asset in Laravel**
+> 
+
+## **Asset in Laravel**
 > **Answer:** declare asset `{{ asset('frontend/css/bootstrap.css') }}`
 > 
 > Even we can use `{{ URL::to('frontend/css/bootstrap.css') }}` 
@@ -111,13 +114,13 @@
 > here **URL::to('')** & **asset('')** work same
 > 
 
-- [ ] **Root Directory Change in laravel**
+## **Root Directory Change in laravel**
 > **Answer:** First bring out all files from `public` folder to `root` folder / directory
 > 
 > Besides, assest should like `{{ asset('public/frontend/css/bootstrap.css') }}` here `public/` added because `index.php` now in root directory 
 > 
 
-- [ ] **Migration in Laravel**
+## **Migration in Laravel**
 > **Answer:** To create a table remember that table name should have in plural form.
 
         php artisan make:migration create_users_table --create=users
@@ -127,14 +130,14 @@
         
 > 
 
-- [ ] **@CSRF in Laravel**
+## **@CSRF in Laravel**
 > **Answer:** Cross-site request forgery (CSRF) are a type of malicious exploit whereby unauthorized commands are performed on behalf of an authorized user.
 > Thankfully, Laravel makes it easy to protect your application from CSRF by using `@csrf` in `form`
 > 
  **Remember: A website or a webapplication is being hacked by attack in `form action` or in `route`**
 > 
 
-- [ ] **Check incoming form data in Laravel**
+## **Check incoming form data in Laravel**
 > **Answer:**
 
         echo "<pre>";
@@ -144,25 +147,25 @@
         return response()->json($request);
 > 
 
-- [ ] **Data Insert in Laravel without using model**
+## **Data Insert in Laravel without using model**
 > **Answer:**
 
     DB::table('table_name')->insert($data) 
 > 
 
-- [ ] **Data Update in Laravel without using model**
+## **Data Update in Laravel without using model**
 > **Answer:**
 
     DB::table('table_name')->where('id', $id)->update($data)
 > 
 
-- [ ] **Data Delete in Laravel without using model**
+## **Data Delete in Laravel without using model**
 > **Answer:**
 
     DB::table('table_name')->where('id', $id)->delete()
 > 
 
-- [ ] **get() & first() in Migration laravel**
+## **get() & first() in Migration laravel**
 > **Answer:**
 
     DB::table('table_name')->get()
@@ -174,20 +177,20 @@ get() will return all data from 'table_name'
 first() will return only specific row from 'table_name'
 > 
 
-- [ ] **Send an id from form view Laravel**
+## **Send an id from form view Laravel**
 > **Answer:**
 
     <a href =" {{ URL::to('/home/create/'.$data->id) }} " />
     Route::get('/home/create/{id}', [controller::class, 'viewMethod']);
 > 
 
-- [ ] **Post image in Laravel**
+## **Post image in Laravel**
 > **Answer:** Must use 
 
     <form action="#" method="POST" encytype = 'multipart/form-data'>**
 > 
 
-- [ ] **Image validation in Laravel**
+## **Image validation in Laravel**
 > **Answer:** 
 
     public function store(Request $request) {
@@ -209,7 +212,7 @@ first() will return only specific row from 'table_name'
     }
 > 
 
-- [ ] **Fetch an image in Laravel**
+## **Fetch an image in Laravel**
 > **Answer:**
 
     <img src=" {{ URL::to($data->image) }} " style="height: 40px; width: 70px" />
@@ -217,7 +220,7 @@ first() will return only specific row from 'table_name'
 Here `$data->image` means `/publi/assest/img_full_name`  
 
 
-- [ ] **Update Image validation in Laravel**
+## **Update Image validation in Laravel**
 > **Answer:** 
 **N.B. must include in the form `<input type="hidden" name="old_photo" value="{{ $data->image_name }}" />`**
 
@@ -247,7 +250,7 @@ Here `$data->image` means `/publi/assest/img_full_name`
 > 
 
 
-- [ ] **one to one join in Laravel**
+## **one to one join in Laravel**
 > **Answer:**
 
     DB::table('BD')->join('UK', 'BD.category_id', 'UK.id')->select('BD.*', 'UK.name')->where('id', $id)->first();
@@ -269,9 +272,4 @@ OR
     </textrea>
     
     
-- [ ] **Asset in Laravel**
-> **Answer:**
-> 
-- [ ] **Asset in Laravel**
-> **Answer:**
     
