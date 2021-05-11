@@ -42,6 +42,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('blog-about') }}">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('blog-post') }}">Blog Post</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('write-post') }}">Write Post</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('student') }}">Student</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('blog-contact') }}">Contact</a></li>
                 </ul>
             </div>

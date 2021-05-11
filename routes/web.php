@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\CleanBlogController;
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,4 +112,11 @@ Route::get('/post/edit/{id}', [PostController::class, 'EditSinglePost']);
 Route::post('/post/update/{id}', [PostController::class, 'UpdateSinglePost']);
 Route::get('/post/delete/{id}', [PostController::class, 'DeleteSinglePost']);
 
+// Student CRUD with using Model
+Route::get('/student/all', [StudentController::class, 'allStudent'])->name('student');
+Route::get('/student/create', [StudentController::class, 'createStudent'])->name('create-student');
+Route::post('/student/store', [StudentController::class, 'storeStudent'])->name('store-student');
+Route::get('/student/edit/{id}', [StudentController::class, 'editStudent']);
+Route::post('/student/update/{id}', [StudentController::class, 'updateStudent']);
+Route::get('/student/delete/{id}', [StudentController::class, 'deleteStudent']);
 
